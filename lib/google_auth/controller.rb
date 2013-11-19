@@ -2,7 +2,7 @@ module GoogleAuth
   module Controller
 
     def self.included(base)
-      base.send(:before_action, :ensure_authenticated)
+      base.send(:before_filter, :ensure_authenticated)
       base.send(:helper_method, :current_user)
     end
 
